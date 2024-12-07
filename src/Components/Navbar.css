@@ -1,0 +1,15 @@
+/* Custom CSS for Navbar Buttons */
+@media (max-width: 991px) {
+  .task-btn {
+    width: 100%; /* Make buttons occupy full width in collapsed navbar */
+    max-width: 200px; /* Optional: Set a max width for buttons */
+    margin-bottom: 10px;
+  }
+}
+
+/* Optional: To control the button width in expanded navbar */
+@media (min-width: 992px) {
+  .task-btn {
+    width: auto; /* Ensure buttons take their original width */
+  }
+}
