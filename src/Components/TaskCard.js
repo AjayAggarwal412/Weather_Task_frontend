@@ -37,9 +37,12 @@ const TaskCard = ({ task, onTaskUpdate, onTaskDelete }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/tasks/${task._id}`, {
-        withCredentials: true,
-      });
+      await axios.delete(
+        `https://weather-task-backend.onrender.com/tasks/${task._id}`,
+        {
+          withCredentials: true,
+        }
+      );
       onTaskDelete(task._id); // Update parent component to remove the task
     } catch (error) {
       console.error("Error deleting task:", error);
@@ -59,7 +62,7 @@ const TaskCard = ({ task, onTaskUpdate, onTaskDelete }) => {
       };
 
       const response = await axios.put(
-        `http://localhost:5000/tasks/${task._id}`,
+        `https://weather-task-backend.onrender.com/tasks/${task._id}`,
         updatedTask,
         { withCredentials: true }
       );

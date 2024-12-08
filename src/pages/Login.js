@@ -32,7 +32,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/login",
+        "https://weather-task-backend.onrender.com/login",
         { ...inputValue },
         { withCredentials: true }
       );

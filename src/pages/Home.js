@@ -15,9 +15,12 @@ const Home = () => {
 
   const fetchTasks = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/tasks", {
-        withCredentials: true,
-      });
+      const { data } = await axios.get(
+        "https://weather-task-backend.onrender.com/tasks",
+        {
+          withCredentials: true,
+        }
+      );
 
       if (data.message === "No tasks found") {
         setTasks([]);
@@ -33,7 +36,7 @@ const Home = () => {
     const checkAuth = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:5000",
+          "https://weather-task-backend.onrender.com",
           {},
           { withCredentials: true }
         );
@@ -54,7 +57,7 @@ const Home = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/logout",
+        "https://weather-task-backend.onrender.com/logout",
         {},
         { withCredentials: true }
       );

@@ -40,7 +40,7 @@ const TaskModal = ({ show, onClose, onTaskAdded }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/tasks",
+        "https://weather-task-backend.onrender.com/tasks",
         { ...taskData, weather },
         { withCredentials: true }
       );
