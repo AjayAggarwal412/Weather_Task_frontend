@@ -40,6 +40,7 @@ const Home = () => {
           {},
           { withCredentials: true }
         );
+        console.log(response.data);
         if (response.data.status === false) {
           navigate("/login");
         } else {

@@ -38,6 +38,7 @@ const Signup = () => {
       );
 
       const { success, message } = data;
+
       if (success) {
         setErrorMessage("");
         setTimeout(() => {
